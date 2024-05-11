@@ -243,7 +243,7 @@ def dex_url_extract(filepath):
 def Decompile_apk(filepath):
     try:
 
-        str_cmd = "apktool" + " d  --only-main-classes "+ filepath +" -o "+tool(filepath)
+        str_cmd = apktool + " d  --only-main-classes "+ filepath +" -o "+tool(filepath)
         os.system(str_cmd)
         return tool(filepath)
     except Exception as e:
